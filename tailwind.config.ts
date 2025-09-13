@@ -22,10 +22,25 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          soft: "hsl(var(--primary-soft))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          soft: "hsl(var(--secondary-soft))",
+        },
+        wellness: {
+          DEFAULT: "hsl(var(--wellness))",
+          foreground: "hsl(var(--wellness-foreground))",
+          soft: "hsl(var(--wellness-soft))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -63,6 +78,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        'gradient-wellness': 'var(--gradient-wellness)',
+        'gradient-calm': 'var(--gradient-calm)',
+        'gradient-soft': 'var(--gradient-soft)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'wellness': 'var(--shadow-wellness)',
+        'card': 'var(--shadow-card)',
+      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -80,10 +105,30 @@ export default {
             height: "0",
           },
         },
+        "gentle-bounce": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-2px)",
+          },
+        },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
+        "fade-in": "fade-in 0.5s ease-out",
       },
     },
   },
