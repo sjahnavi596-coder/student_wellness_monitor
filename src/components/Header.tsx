@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   return (
-    <header className="bg-card border-b border-border/50 shadow-soft">
+    <header className="bg-white/80 backdrop-blur-md border-b border-border/30 shadow-glow sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-gradient-wellness p-2 rounded-xl shadow-wellness">
+            <div className="bg-gradient-wellness p-3 rounded-2xl shadow-glow animate-float">
               <Heart className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -30,7 +30,7 @@ const Header = () => {
             <a href="#resources" className="text-foreground hover:text-primary transition-colors font-medium">
               Resources
             </a>
-            <Button variant="default" className="bg-primary hover:bg-primary/90 shadow-soft">
+            <Button variant="default" className="bg-gradient-wellness text-white border-0 hover:scale-105 shadow-glow transition-all duration-300">
               Get Help
             </Button>
           </nav>

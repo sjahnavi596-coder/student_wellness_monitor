@@ -82,11 +82,14 @@ export default {
         'gradient-wellness': 'var(--gradient-wellness)',
         'gradient-calm': 'var(--gradient-calm)',
         'gradient-soft': 'var(--gradient-soft)',
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'wellness': 'var(--shadow-wellness)',
         'card': 'var(--shadow-card)',
+        'glow': 'var(--shadow-glow)',
       },
       keyframes: {
         "accordion-down": {
@@ -123,12 +126,30 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-6px)",
+          },
+        },
+        "pulse-soft": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0.8",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "gentle-bounce": "gentle-bounce 2s ease-in-out infinite",
         "fade-in": "fade-in 0.5s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
       },
     },
   },

@@ -20,20 +20,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    /* Primary - Calming therapeutic blue */
-    --primary: 210 75% 60%;
+    /* Primary - Deep ocean blue with vibrancy */
+    --primary: 220 85% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 210 60% 85%;
+    --primary-soft: 220 70% 90%;
+    --primary-glow: 220 85% 70%;
 
-    /* Secondary - Soft sage green for wellness */
-    --secondary: 140 30% 75%;
-    --secondary-foreground: 140 60% 15%;
-    --secondary-soft: 140 20% 90%;
+    /* Secondary - Rich emerald for wellness */
+    --secondary: 155 55% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-soft: 155 40% 88%;
 
-    /* Wellness accent - Warm purple for emotional connection */
-    --wellness: 270 50% 70%;
+    /* Wellness accent - Vibrant purple for emotional connection */
+    --wellness: 280 65% 60%;
     --wellness-foreground: 0 0% 100%;
-    --wellness-soft: 270 30% 90%;
+    --wellness-soft: 280 40% 92%;
 
     /* Muted tones - Gentle grays */
     --muted: 215 15% 92%;
@@ -60,15 +61,18 @@
     /* Design tokens */
     --radius: 0.75rem;
 
-    /* Gradients for wellness theming */
-    --gradient-wellness: linear-gradient(135deg, hsl(210 75% 60%), hsl(270 50% 70%));
-    --gradient-calm: linear-gradient(180deg, hsl(140 30% 75%), hsl(210 60% 85%));
-    --gradient-soft: linear-gradient(145deg, hsl(var(--background)), hsl(215 15% 95%));
+    /* Enhanced gradients for modern appeal */
+    --gradient-wellness: linear-gradient(135deg, hsl(220 85% 55%), hsl(280 65% 60%), hsl(155 55% 50%));
+    --gradient-calm: linear-gradient(180deg, hsl(155 55% 50%), hsl(220 70% 90%));
+    --gradient-soft: linear-gradient(145deg, hsl(var(--background)), hsl(220 20% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 55% / 0.1), hsl(280 65% 60% / 0.1));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 20% 98%));
 
-    /* Shadows for depth */
-    --shadow-soft: 0 2px 20px -8px hsl(215 25% 15% / 0.1);
-    --shadow-wellness: 0 8px 32px -12px hsl(210 75% 60% / 0.3);
-    --shadow-card: 0 4px 24px -8px hsl(215 25% 15% / 0.06);
+    /* Enhanced shadows with color tints */
+    --shadow-soft: 0 4px 24px -8px hsl(220 85% 55% / 0.1);
+    --shadow-wellness: 0 12px 40px -12px hsl(220 85% 55% / 0.25);
+    --shadow-card: 0 6px 32px -8px hsl(220 30% 25% / 0.08);
+    --shadow-glow: 0 0 40px hsl(220 85% 55% / 0.2);
 
     /* Animation timing */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

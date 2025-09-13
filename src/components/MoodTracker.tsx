@@ -43,7 +43,7 @@ const MoodTracker = () => {
   }
 
   return (
-    <Card className="shadow-card border-border/50">
+    <Card className="shadow-glow border-0 bg-gradient-card">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold text-foreground">
           How are you feeling today?
@@ -59,12 +59,12 @@ const MoodTracker = () => {
               key={mood.value}
               onClick={() => handleMoodSelect(mood.value)}
               className={`
-                flex flex-col items-center p-4 rounded-xl border-2 transition-all duration-300
-                hover:scale-105 hover:shadow-soft
+                flex flex-col items-center p-5 rounded-2xl border-2 transition-all duration-500
+                hover:scale-110 hover:shadow-glow hover:-translate-y-1
                 ${
                   selectedMood === mood.value
-                    ? 'border-primary bg-primary-soft shadow-wellness'
-                    : 'border-border bg-card hover:border-primary/50'
+                    ? 'border-primary bg-gradient-wellness text-white shadow-glow animate-pulse-soft'
+                    : 'border-border/30 bg-white/80 backdrop-blur-sm hover:border-primary/50 hover:bg-white shadow-soft'
                 }
               `}
             >
@@ -80,9 +80,10 @@ const MoodTracker = () => {
           <div className="animate-fade-in">
             <Button
               onClick={handleSubmit}
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground 
-                         font-semibold py-3 rounded-xl shadow-soft
-                         transition-all duration-300 hover:shadow-wellness"
+              className="w-full bg-gradient-wellness text-white border-0
+                         font-semibold py-4 rounded-2xl shadow-glow
+                         transition-all duration-500 hover:scale-105 hover:shadow-wellness
+                         animate-pulse-soft"
             >
               Log Today's Mood
             </Button>

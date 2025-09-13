@@ -12,12 +12,13 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-wellness opacity-10"></div>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-hero"></div>
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${heroImage})` }}
         ></div>
+        <div className="absolute inset-0 bg-gradient-wellness opacity-5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="animate-fade-in">
@@ -34,18 +35,20 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground 
-                           px-8 py-4 text-lg font-semibold rounded-xl shadow-wellness
-                           hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-wellness text-white border-0
+                           px-8 py-4 text-lg font-semibold rounded-2xl shadow-glow
+                           hover:scale-105 hover:shadow-wellness transition-all duration-500
+                           animate-pulse-soft"
                 >
                   Start Your Journey
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary-soft
-                           px-8 py-4 text-lg font-semibold rounded-xl
-                           hover:scale-105 transition-all duration-300"
+                  className="border-2 border-primary/30 text-primary bg-white/80 backdrop-blur-sm
+                           hover:bg-primary hover:text-white hover:border-primary
+                           px-8 py-4 text-lg font-semibold rounded-2xl
+                           hover:scale-105 transition-all duration-500 shadow-soft"
                 >
                   Learn More
                 </Button>
@@ -56,7 +59,7 @@ const Index = () => {
       </section>
 
       {/* Features Overview */}
-      <section className="py-16 bg-card">
+      <section className="py-20 bg-gradient-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -101,8 +104,10 @@ const Index = () => {
                   className="text-center group animate-fade-in"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className={`${feature.color} w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="h-8 w-8" />
+                  <div className={`${feature.color} w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 
+                                    group-hover:scale-110 group-hover:shadow-glow transition-all duration-500
+                                    shadow-soft animate-float`}>
+                    <IconComponent className="h-10 w-10" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
                     {feature.title}
